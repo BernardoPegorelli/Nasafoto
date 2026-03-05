@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NASA APOD Birthday - Descubra o Universo</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="stars-container"></div>
+    
+    <main class="container">
+        <header>
+            <h1>Astronomy Picture of the Day</h1>
+            <p class="subtitle">O que a NASA viu no seu aniversário?</p>
+        </header>
+
+        <section class="search-section">
+            <div class="glass-card">
+                <p>Insira sua data de nascimento para descobrir:</p>
+                <div class="input-group">
+                    <input type="date" id="birth-date" required>
+                    <button id="fetch-btn">Explorar</button>
+                </div>
+            </div>
+        </section>
+
+        <div id="loader" class="hidden">
+            <div class="spinner"></div>
+            <p>Sondando o espaço profundo...</p>
+        </div>
+
+        <section id="result-section" class="hidden">
+            <div class="result-card glass-card">
+                <h2 id="apod-title"></h2>
+                <div class="media-container" id="media-container">
+                    <!-- Image or Video will be injected here -->
+                </div>
+                <div class="info-content">
+                    <p id="apod-date" class="date-label"></p>
+                    <p id="apod-explanation"></p>
+                </div>
+            </div>
+        </section>
+
+        <div id="error-message" class="hidden error-card">
+            <p>Ocorreu um erro ao buscar os dados. Verifique a data e tente novamente.</p>
+        </div>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
